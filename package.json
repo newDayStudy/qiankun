@@ -1,0 +1,24 @@
+{
+  "name": "qiankun",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "install:vue": "cd micro-app-vue && yarn",
+    "install:main": "cd micro-app-main && yarn",
+    "dev:vue": "cd micro-app-vue && yarn serve",
+    "dev:main": "cd micro-app-main && yarn serve",
+    "dev:react": "cd micro-app-react && yarn start"
+  },
+  "dependencies": {
+    "vue": "^3.2.37"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "less": "3",
+    "less-loader": "4.1.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
+  }
+}
