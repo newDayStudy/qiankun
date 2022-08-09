@@ -6,6 +6,7 @@
   "scripts": {
     "install:vue": "cd micro-app-vue && yarn",
     "install:main": "cd micro-app-main && yarn",
+    "install:react": "cd micro-app-react && yarn",
     "dev:vue": "cd micro-app-vue && yarn serve",
     "dev:main": "cd micro-app-main && yarn serve",
     "dev:react": "cd micro-app-react && yarn start"
