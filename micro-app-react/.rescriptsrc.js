@@ -2,7 +2,7 @@ module.exports = {
   webpack: (config) => {
     config.output.library = `ReactMicroApp`;
     config.output.libraryTarget = 'umd';
-    // config.output.jsonpFunction = `webpackJsonp_${name}`;
+    config.output.chunkLoadingGlobal = `webpackJsonp_${name}`;
     config.output.globalObject = 'window';
 
     
