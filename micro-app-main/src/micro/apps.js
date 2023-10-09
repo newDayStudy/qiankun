@@ -9,14 +9,14 @@ const apps = [
       name: "VueMicroApp",
       entry: 'http://localhost:10200',
       container: "#frame",
-      activeRule: "/#/microApp/vue",
+      activeRule: "/microApp/vue",
     },
     {
       name: "ReactMicroApp",
       entry: 'http://localhost:10300',
       container: "#frame",
-      activeRule: "/#/microApp/react",
+      activeRule: "/microApp/react",
     }
   ];
-  
+
   export default apps;

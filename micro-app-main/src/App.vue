@@ -2,14 +2,15 @@
   <a-config-provider prefixCls="cns">
     <section id="cns-main-app">
       <section class="cns-menu-wrapper">
+        <span class="title">Qian Kun</span>
         <a-menu
-          style="width: 256px"
-          mode="inline"
           theme="dark"
+          mode="horizontal"
+          v-model="selectedKeys"
         >
-          <a-sub-menu v-for="item in menus" :key="item.key" @titleClick="titleClick(item)">
-            <span slot="title"><a-icon type="mail" /><span>{{ item.title }}</span></span>
-          </a-sub-menu>
+          <a-menu-item v-for="item in menus" :key="item.key">
+            <span><a-icon type="mail" /><span>{{ item.title }}</span></span>
+          </a-menu-item>
         </a-menu>
       </section>
       <section class="cns-frame-wrapper">
@@ -30,7 +31,7 @@ export default {
       menus: [
         {
           key: "Home",
-          title: "主应用",
+          title: "控制面板",
           path: "/"
         },
         {
@@ -43,56 +44,51 @@ export default {
           title: "React微应用",
           path: "/microApp/react"
         }
-      ]
+      ],
+      selectedKeys: ['Home']
     }
   },
-  methods: {
-    titleClick(router){
-      this.$router.push(router.path)
+  watch: {
+    selectedKeys: {
+      deep: true,
+      handler (v) {
+        const route = this.menus.find(item => item.key == v)
+        if (this.$route.fullPath == route.path) return
+        this.$router.push(route.path)
+      },
+      immediate: true
     }
   }
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="css">
 #cns-main-app {
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  position: relative;
-}
-  
-.cns-nav-wrapper {
-    position: fixed;
-    width: 100%;
-    min-width: 1060px;
-    padding-left: 172px;
-    left: 0;
-    top: 0;
-    z-index: 30;
-  }
-.cns-menu-wrapper {
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 40;
-    width: 172px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: #001529;
-  }
-.cns-frame-wrapper {
-  padding-left: 172px;
-  flex-grow: 1;
-  height: 100%;
-  width: 100%;
-  position: relative;
 }
 
-#cns-frame {
-  width: 100%;
+.cns-menu-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    background-color: #001529;
+}
+.cns-menu-wrapper span.title{
+  padding: 0 40px;
+  color: #fff;
+}
+.cns-frame-wrapper {
+  flex: 1;
+}
+
+#frame{
   height: 100%;
 }
-#cns-frame:first-child {
-    height: 100%;
-  }
+#frame div:first-child{
+  height: 100%;
+}
 </style>

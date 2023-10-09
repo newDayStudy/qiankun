@@ -4,22 +4,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 // import {ConfigProvider} from 'antd'
 import 'antd/dist/antd.min.css';
 let root = null;
 function render(props) {
   const { container } = props;
+  const basename = window.__POWERED_BY_QIANKUN__ ? '/microApp/react': '/'
   root = ReactDOM.createRoot(container ? container.querySelector('#root') : document.querySelector('#root'))
   root.render(
     // <ConfigProvider prefixCls='yourPrefixR'>
       <React.StrictMode>
-        <HashRouter basename='/microApp/react'>
+        <BrowserRouter basename={basename}>
           <App />
-        </HashRouter>
+        </BrowserRouter>
       </React.StrictMode>
     // </ConfigProvider>
-    
+
   );
 }
 // If you want to start measuring performance in your app, pass a function

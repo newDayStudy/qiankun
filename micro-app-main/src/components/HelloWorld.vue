@@ -9,6 +9,9 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted() {
+    localStorage.setItem("user", 'admin')
   }
 }
 </script>

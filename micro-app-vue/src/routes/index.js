@@ -1,5 +1,6 @@
 import HomeCom from '@/pages/Home-Com'
 import HelloWorld from '@/components/HelloWorld'
+import Dashboard from "@/pages/Dashboard.vue";
 export default [
     {
         path: '',
@@ -11,10 +12,16 @@ export default [
         beforeEnter: (to, from, next) => {
             console.log('进入了路由')
             next()
-        }
-    },
-    {
-        path: '/microApp/vue/hello',
-        component: HelloWorld
+        },
+        children: [
+            {
+                path: '',
+                component: Dashboard
+            },
+            {
+                path: 'hello',
+                component: HelloWorld
+            }
+        ]
     }
 ]

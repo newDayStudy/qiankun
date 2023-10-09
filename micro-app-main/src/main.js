@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 Vue.config.productionTip = false
 startQiankun();
 const router = new VueRouter({
-  mode: "hash",
+  mode: "history",
   routes:[
     {
       path: '',
