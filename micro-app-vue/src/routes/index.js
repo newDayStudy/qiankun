@@ -4,13 +4,13 @@ import Dashboard from "@/pages/Dashboard.vue";
 export default [
     {
         path: '',
-        redirect: '/microApp/vue'
+        redirect: '/home'
     },
     {
-        path: '/microApp/vue',
+        path: '/home',
         component: HomeCom,
         beforeEnter: (to, from, next) => {
-            console.log('进入了路由')
+            console.log('进入了路由', to)
             next()
         },
         children: [
@@ -19,7 +19,7 @@ export default [
                 component: Dashboard
             },
             {
-                path: 'hello',
+                path: 'form',
                 component: HelloWorld
             }
         ]

@@ -24,6 +24,7 @@ function render() {
   console.log('vue子项目的base路径', window.__POWERED_BY_QIANKUN__ ? "/vue" : "/")
   router = new VueRouter({
     // 运行在主应用中时，添加路由命名空间 /vue
+    base: window.__POWERED_BY_QIANKUN__ ? "/microApp/vue" : "/",
     mode: "history",
     routes: routes,
   });

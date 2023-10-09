@@ -3,14 +3,18 @@
     <a-layout-sider theme="light">
       <a-menu
           class="mic-app-vue-menu"
-          :default-selected-keys="['home']"
+          :default-selected-keys="current"
           :open-keys.sync="openKeys"
           mode="inline"
           @click="handleClick"
       >
-        <a-menu-item key="home">
+        <a-menu-item key="/home">
           <a-icon type="home" />
           首页
+        </a-menu-item>
+        <a-menu-item key="/home/form">
+          <a-icon type="home" />
+          表单
         </a-menu-item>
       </a-menu>
     </a-layout-sider>
@@ -29,7 +33,7 @@ export default{
   },
   data() {
     return {
-      current: ['home'],
+      current: ['/home'],
       openKeys: [],
     };
   },
@@ -41,10 +45,8 @@ export default{
   methods: {
     handleClick(e) {
       console.log('click', e);
-    },
-    titleClick(e) {
-      console.log('titleClick', e);
-    },
+      this.$router.push(e.key)
+    }
   },
 }
 </script>

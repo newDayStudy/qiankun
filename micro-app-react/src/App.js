@@ -18,8 +18,8 @@ function Home() {
 }
 function About() {
   return (
-    <Layout>about</Layout>
-    // <iframe src='http://localhost:3000/#/question' className='iframe'></iframe>
+    // <Layout>about</Layout>
+    <iframe src='http://localhost:8080' className='iframe' border='no' style={{width: '100%', height: 700}}></iframe>
   )
 }
 function App() {

@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "ant-design-vue": "1.7.0",
+    "async-validator": "^4.2.5",
     "core-js": "^3.33.0",
     "echarts": "^5.4.3",
     "moment": "^2.29.4",

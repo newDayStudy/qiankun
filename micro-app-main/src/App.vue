@@ -36,12 +36,12 @@ export default {
         },
         {
           key: "VueMicroApp",
-          title: "Vue微应用",
+          title: "Vue应用",
           path: "/microApp/vue"
         },
         {
           key: "ReactMicroApp",
-          title: "React微应用",
+          title: "React应用",
           path: "/microApp/react"
         }
       ],
@@ -88,7 +88,7 @@ export default {
 #frame{
   height: 100%;
 }
-#frame div:first-child{
+#frame > div:first-child{
   height: 100%;
 }
 </style>
