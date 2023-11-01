@@ -8,18 +8,18 @@ function Home() {
   return (
     <Layout className='home'>
       <Content>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        欢迎进入React的世界
       </Content>
     </Layout>
   )
 }
 function About() {
   return (
-    // <Layout>about</Layout>
-    <iframe src='http://localhost:8080' className='iframe' border='no' style={{width: '100%', height: 700}}></iframe>
+    <Layout>
+        <Content>
+            About 页面
+        </Content>
+    </Layout>
   )
 }
 function App() {

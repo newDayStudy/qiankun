@@ -1,25 +1,51 @@
 {
-  "name": "qiankun",
+  "name": "micro-app-main",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "install:vue": "cd micro-app-vue && yarn",
-    "install:main": "cd micro-app-main && yarn",
-    "install:react": "cd micro-app-react && yarn",
-    "dev:vue": "cd micro-app-vue && yarn serve",
-    "dev:main": "cd micro-app-main && yarn serve",
-    "dev:react": "cd micro-app-react && yarn start"
+    "dev": "cross-env NODE_ENV=development node exec.js",
+    "build-all": "cross-env NODE_ENV=production node exec.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "vue": "^3.2.37"
+    "ant-design-vue": "^1.4.12",
+    "core-js": "^3.33.0",
+    "cross-env": "^7.0.3",
+    "qiankun": "^2.7.4",
+    "vue": "^2.6.14",
+    "vue-router": "3.1.6"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.0.0",
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
     "less": "3",
     "less-loader": "4.1.0",
-    "typescript": "^4.6.4",
-    "vite": "^3.0.0",
-    "vue-tsc": "^0.38.4"
-  }
+    "vue-template-compiler": "^2.6.14"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

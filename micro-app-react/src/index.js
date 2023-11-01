@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-// import {ConfigProvider} from 'antd'
+import {ConfigProvider} from 'antd'
 import 'antd/dist/antd.min.css';
 let root = null;
 function render(props) {

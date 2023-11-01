@@ -20,7 +20,7 @@ export default {
     };
   },
   mounted(){
-    // console.log(this.$route)
+   console.log('子应用获取主应用user', localStorage.getItem('user'))
   }
 }
 </script>
