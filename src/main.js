@@ -14,7 +14,29 @@ const router = new VueRouter({
     {
       path: '',
       name: 'main',
-      component: () => import('@/components/HelloWorld.vue')
+      component: () => import('@/components/HelloWorld.vue'),
+      children: [
+        {
+          path: '',
+          name: 'v-dashboard',
+          component: () => import('@/views/v-dashboard.vue')
+        },
+        {
+          path: '/user',
+          name: 'v-user',
+          component: () => import('@/views/v-user.vue')
+        },
+        {
+          path: "/role",
+          name: 'v-role',
+          component: () => import('@/views/v-role.vue')
+        },
+		{
+			path: '/application',
+			name: 'v-application',
+			component: () => import('@/views/v-application.vue')
+		}
+      ]
     }
   ]
 });
