@@ -4,7 +4,6 @@
       <section class="cns-menu-wrapper">
         <span class="title">Qian Kun</span>
         <a-menu
-          theme="dark"
           mode="horizontal"
           v-model="selectedKeys"
         >
@@ -75,11 +74,14 @@ export default {
     flex-shrink: 0;
     display: flex;
     align-items: center;
-    background-color: #001529;
+    margin-bottom: 1px;
 }
 .cns-menu-wrapper span.title{
   padding: 0 40px;
-  color: #fff;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+  /* -webkit-box-reflect: below  文字倒影*/  
 }
 .cns-frame-wrapper {
   flex: 1;
@@ -90,5 +92,9 @@ export default {
 }
 #frame > div:first-child{
   height: 100%;
+}
+
+.cns-menu-horizontal{
+  border-bottom: none !important;
 }
 </style>
