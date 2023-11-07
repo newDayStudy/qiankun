@@ -12,7 +12,7 @@
     <a-table row-key="id" bordered  :columns="columns" :data-source="data" size="middle">
       <template slot="action">
         <a-button type="link" size="small">
-          配置权限
+          菜单权限
         </a-button>
       </template>
     </a-table>
