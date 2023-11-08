@@ -1,5 +1,5 @@
 <template>
-  <a-config-provider prefixCls="cns">
+  <a-config-provider prefixCls="cns" :locale="locale">
     <section id="cns-main-app">
       <section class="cns-menu-wrapper">
         <span class="title">Qian Kun</span>
@@ -24,9 +24,11 @@
 </template>
 
 <script>
+import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
 export default {
   data() {
     return {
+      locale: zhCN,
       menus: [
         {
           key: "Home",
