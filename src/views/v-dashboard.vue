@@ -59,7 +59,7 @@ export default {
 <template>
   <div>
     <h2>Welcome to Qiankun dashboard</h2>
-    <audio src="../assets/800283362.mp3" autoplay controls muted id="audio"></audio>
+    <audio src="../assets/800283362.mp3" autoplay controls  id="audio"></audio>
     <div class="gc" style="height: 400px;overflow: hidden;">
       <ul :style="{transform: 'translateY('+translateY+'px)'}">
         <li v-for="(item, index) in result" :key="item.time + Math.random()" :id="item.time" :class="{active: currentIndex == index}">{{ item.word }}</li>
