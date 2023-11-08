@@ -42,9 +42,6 @@ function Home() {
 
     // 及时销毁 editor ，重要！
     useEffect(() => {
-        if (editor) {
-            console.log(editor.getConfig())
-        }
         return () => {
             if (editor == null) return
             editor.destroy()

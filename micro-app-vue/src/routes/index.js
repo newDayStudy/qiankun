@@ -1,6 +1,7 @@
 import HomeCom from '@/pages/Home-Com'
 import HelloWorld from '@/components/HelloWorld'
 import Dashboard from "@/pages/Dashboard.vue";
+import vTable from "@/pages/v-table.vue";
 export default [
     {
         path: '',
@@ -21,6 +22,10 @@ export default [
             {
                 path: 'form',
                 component: HelloWorld
+            },
+            {
+                path: 'table',
+                component: vTable
             }
         ]
     }

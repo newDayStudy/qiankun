@@ -16,6 +16,10 @@
           <a-icon type="home" />
           表单
         </a-menu-item>
+        <a-menu-item key="/home/table">
+          <a-icon type="home" />
+          表格
+        </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout-content class="mic-app-vue-content">
