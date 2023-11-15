@@ -58,7 +58,7 @@ export default {
         this.$router.push(route.path)
       },
       immediate: true
-    }
+    },
   }
 }
 </script>
@@ -83,7 +83,7 @@ export default {
   font-size: 20px;
   color: #333;
   font-weight: bold;
-  /* -webkit-box-reflect: below  文字倒影*/  
+  /* -webkit-box-reflect: below  文字倒影*/
 }
 .cns-frame-wrapper {
   flex: 1;

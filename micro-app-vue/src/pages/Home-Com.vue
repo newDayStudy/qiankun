@@ -20,6 +20,14 @@
           <a-icon type="home" />
           表格
         </a-menu-item>
+        <a-menu-item key="/home/map">
+          <a-icon type="home" />
+          地图
+        </a-menu-item>
+        <a-menu-item key="/home/pie">
+          <a-icon type="home" />
+          3d饼图
+        </a-menu-item>
       </a-menu>
     </a-layout-sider>
     <a-layout-content class="mic-app-vue-content">
